@@ -1,10 +1,10 @@
 package me.syncwrld.minecraft.pingcompass.sample
 
-enum class TrackingMode {
-    HIGHEST, LOWEST;
+enum class TrackingMode(val state: String) {
+    HIGHEST("§cHighest"),
+    LOWEST("§aLowest");
 
-    fun state() = when (this) {
-        HIGHEST -> "§cHighest"
-        LOWEST -> "§aLowest"
+    fun state(): String {
+        return this.state;
     }
 }
