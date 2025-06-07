@@ -19,6 +19,7 @@ dependencies {
     compileOnly("org.spigotmc:spigot-api:1.20.4-R0.1-SNAPSHOT")
     compileOnly("me.clip:placeholderapi:2.11.6")
     implementation("com.github.cryptomorin:XSeries:13.3.1")
+    implementation("org.bstats:bstats-bukkit:3.0.2")
 
     compileOnly("org.projectlombok:lombok:1.18.38")
     annotationProcessor("org.projectlombok:lombok:1.18.38")
@@ -31,6 +32,7 @@ tasks.build {
 tasks.withType<ShadowJar> {
     archiveClassifier.set("")
     relocate("com.cryptomorin.xseries", "me.syncwrld.minecraft.pingcompass.libs.xseries")
+    relocate("org.bstats", "me.syncwrld.minecraft.pingcompass.libs.bstats")
 }
 
 tasks.withType<JavaCompile> {

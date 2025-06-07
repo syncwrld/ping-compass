@@ -3,6 +3,9 @@ name: PingCompass
 version: 1.0.0
 api-version: 1.21
 
+author: syncwrld
+website: https://github.com/syncwrld/ping-compass
+
 commands:
   givepc:
     permission: "pingcompass.give"
