@@ -1,0 +1,13 @@
+main: me.syncwrld.minecraft.pingcompass.PingCompassPlugin
+name: PingCompass
+version: 1.0.0
+api-version: 1.21
+
+commands:
+  givepc:
+    permission: "pingcompass.give"
+    description: "Gives the ping compass to a certain player"
+    aliases:
+      - givepingcompass
+      - pingcompassgive
+      - pcgive
