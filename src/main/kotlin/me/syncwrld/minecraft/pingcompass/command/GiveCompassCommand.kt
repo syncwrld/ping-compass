@@ -14,12 +14,12 @@ class GiveCompassCommand : CommandExecutor {
         label: String,
         arguments: Array<out String?>?
     ): Boolean {
-        if (arguments?.isEmpty()!!) {
+        if (arguments?.isEmpty() == true) {
             commandIssuer.sendMessage("§7Usage: §9/${label} <player>");
             return false;
         }
 
-        val playerName: String? = arguments[0];
+        val playerName: String? = arguments?.get(0);
         val playerTarget = Bukkit.getPlayerExact(playerName!!)
 
         if (playerTarget == null || !(playerTarget.isOnline)) {
